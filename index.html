@@ -1,0 +1,3836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Header</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+/* Background (demo purpose) */
+body{
+  background:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') no-repeat center/cover;
+  height:100vh;
+}
+
+/* Header */
+.header0{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(8px);
+  z-index:1000;
+}
+
+/* Logo */
+.logo0{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.logo0 img{
+  width:35px;
+  filter:brightness(0) invert(1);
+}
+
+/* Nav */
+.nav0{
+  display:flex;
+  gap:30px;
+}
+
+.nav0 a{
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  position:relative;
+  transition:0.3s;
+}
+
+.nav0 a:hover{
+  color:#00ff99;
+}
+
+/* NEW Badge */
+.nav0 a span{
+  background:#00ff99;
+  color:black;
+  font-size:10px;
+  padding:2px 6px;
+  border-radius:4px;
+  margin-left:5px;
+}
+
+/* Right Side */
+.right0{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+/* Search Circle */
+.search0{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+}
+
+.search0 i{
+  color:black;
+}
+
+/* Contact Button */
+.contact0{
+  background:white;
+  color:black;
+  padding:10px 18px;
+  border-radius:25px;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
+}
+
+/* Mobile Menu Icon */
+.menu-toggle0{
+  display:none;
+  font-size:22px;
+  color:white;
+  cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+  .nav0{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    flex-direction:column;
+    background:rgba(0,0,0,0.9);
+    text-align:center;
+    display:none;
+    padding:20px 0;
+  }
+
+  .nav0.active{
+    display:flex;
+  }
+
+  .menu-toggle0{
+    display:block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HERO SECTION */
+.hero1{
+  height:100vh;
+  background:url('sun.jpg') no-repeat center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  color:white;
+}
+
+/* Dark overlay */
+.hero1::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+}
+
+/* Content */
+.hero-content1{
+  position:relative;
+  text-align:center;
+  max-width:800px;
+  padding:20px;
+}
+
+/* Big Heading */
+.hero1 h1{
+  font-size:80px;
+  font-weight:bold;
+  letter-spacing:3px;
+}
+
+/* Farmer Image */
+.farmer-img{
+  position:absolute;
+  top:-120px;
+  left:50%;
+  transform:translateX(-50%);
+  width:180px;
+}
+
+/* Paragraph */
+.hero1 p{
+  margin:20px 0;
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* Button */
+.btn1{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 22px;
+  background:white;
+  color:black;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.btn1 span{
+  font-size:18px;
+}
+
+/* RIGHT BOTTOM SECTION */
+.right-box1{
+  position:absolute;
+  bottom:30px;
+  right:30px;
+  text-align:left;
+}
+
+/* User Images */
+.users{
+  display:flex;
+}
+
+.users img{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:2px solid white;
+  margin-left:-10px;
+}
+
+/* Text */
+.users-text1{
+  margin-top:10px;
+}
+
+.users-text1 h3{
+  font-size:20px;
+}
+
+.users-text1 p{
+  font-size:12px;
+}
+
+/* Scroll Circle */
+.scroll-circle{
+  position:absolute;
+  bottom:30px;
+  right:150px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+}
+
+.scroll-circle i{
+  color:white;
+  font-size:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .hero1 h1{
+    font-size:40px;
+  }
+
+  .farmer-img{
+    width:120px;
+    top:-80px;
+  }
+
+  .right-box1{
+    right:15px;
+    bottom:15px;
+  }
+
+  .scroll-circle{
+    right:100px;
+    width:50px;
+    height:50px;
+  }
+
+  .users img{
+    width:30px;
+    height:30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.section2{
+  background:#fff;
+  padding:80px 60px;
+}
+
+.container2{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+}
+
+/* LEFT CONTENT */
+.left2{
+  flex:1;
+}
+
+.left2 p.main-text2{
+  font-size:16px;
+  line-height:1.8;
+  color:#333;
+  margin-bottom:25px;
+}
+
+/* BUTTON */
+.btn2{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#00ff99;
+  color:black;
+  padding:12px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-bottom:30px;
+}
+
+.btn2 span{
+  font-size:18px;
+}
+
+/* STATS */
+.stats2{
+  display:flex;
+  gap:40px;
+}
+
+.stat h2{
+  font-size:28px;
+  color:#000;
+}
+
+.stat p{
+  font-size:13px;
+  color:#666;
+  margin-top:5px;
+}
+
+/* RIGHT IMAGE */
+.right2{
+  flex:1;
+  position:relative;
+}
+
+.right2 img{
+  width:100%;
+  border-radius:15px;
+}
+
+/* IMAGE BUTTON */
+.image-btn{
+  position:absolute;
+  top:20px;
+  left:20px;
+  background:black;
+  color:white;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .container2{
+    flex-direction:column;
+  }
+
+  .section2{
+    padding:50px 20px;
+  }
+
+  .stats2{
+    flex-direction:column;
+    gap:20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN SECTION */
+.section3{
+  background:#00ff99;
+  padding:80px 60px;
+}
+
+/* HEADING */
+.heading3{
+  max-width:500px;
+  margin-bottom:40px;
+}
+
+.heading3 h1{
+  font-size:40px;
+  color:black;
+  line-height:1.3;
+}
+
+.heading3 span{
+  display:block;
+}
+
+/* CARD */
+.card3{
+  background:white;
+  border-radius:15px;
+  padding:20px;
+  margin-bottom:30px;
+  position:relative;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.card3 img{
+  width:100%;
+  border-radius:10px;
+  max-height:0;
+  transition:0.5s;
+  object-fit:cover;
+}
+
+/* OPEN CLASS */
+.card3.active img{
+  max-height:250px;
+  margin-top:15px;
+}
+
+/* TITLE */
+.card3 .title-green3{
+  color:#00cc66;
+  font-weight:bold;
+}
+
+.card3 .title{
+  font-size:22px;
+  color:black;
+}
+
+/* ARROW */
+.arrow3{
+  position:absolute;
+  right:20px;
+  top:25px;
+  font-size:22px;
+  cursor:pointer;
+}
+
+/* WHITE BOX */
+.middle-box3{
+  background:white;
+  border-radius:15px;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:30px;
+}
+
+.middle-box3 img{
+  width:120px;
+  border-radius:10px;
+}
+
+/* TEXT */
+.middle-content3{
+  flex:1;
+}
+
+.middle-content3 h3{
+  font-size:20px;
+}
+
+.middle-content3 .percent3{
+  font-weight:bold;
+  margin:5px 0;
+}
+
+.middle-content3 p{
+  font-size:13px;
+  color:#555;
+}
+
+/* BUTTON */
+.btn3{
+  background:#00ff99;
+  color:black;
+  padding:10px 18px;
+  border-radius:25px;
+  font-weight:bold;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .section3{
+    padding:50px 20px;
+  }
+
+  .heading3 h1{
+    font-size:28px;
+  }
+
+  .middle-box3{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .middle-box3 img{
+    width:100%;
+  }
+
+  .btn3{
+    margin-top:10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.section4{
+  background:white;
+  padding:80px 40px;
+  overflow:hidden;
+}
+
+/* TOP TEXT */
+.top4{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+  flex-wrap:wrap;
+}
+
+.top4 h2{
+  font-size:32px;
+  color:black;
+  line-height:1.3;
+}
+
+.top4 p{
+  max-width:350px;
+  color:#555;
+  font-size:14px;
+}
+
+/* SLIDER */
+.slider4{
+  display:flex;
+  gap:20px;
+  width:max-content;
+  animation:scroll 20s linear infinite alternate;
+}
+
+/* CARD */
+.card4{
+  position:relative;
+  min-width:220px;
+  height:300px;
+  border-radius:15px;
+  overflow:hidden;
+  flex-shrink:0;
+}
+
+.card4 img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* OVERLAY */
+.overlay4{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  color:white;
+  background:linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+/* TOP LABEL */
+.label4{
+  background:rgba(0,0,0,0.6);
+  padding:5px 10px;
+  border-radius:15px;
+  font-size:12px;
+  width:max-content;
+}
+
+/* CENTER TITLE */
+.title4{
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* TEMP */
+.temp4{
+  align-self:flex-end;
+  font-size:14px;
+}
+
+/* ANIMATION */
+@keyframes scroll{
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-50%); }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .top4{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+  }
+
+  .top4 h2{
+    font-size:24px;
+  }
+
+  .slider4{
+    animation-duration:25s;
+  }
+
+  .card4{
+    min-width:180px;
+    height:250px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.section5{
+  background:#fff;
+  padding:100px 20px;
+  text-align:center;
+  overflow:hidden;
+}
+
+/* CENTER USER */
+.user5{
+  position:relative;
+  display:inline-block;
+}
+
+.user5 img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* QUOTE ICON */
+.quote5{
+  position:absolute;
+  bottom:-8px;
+  right:-8px;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  background:black;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:14px;
+}
+
+/* COMMENT */
+.comment5{
+  max-width:600px;
+  margin:25px auto;
+  font-size:17px;
+  line-height:1.7;
+  color:black;
+}
+
+/* STARS */
+.stars5{
+  color:gold;
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+/* NAME */
+.name5{
+  font-size:20px;
+  font-weight:bold;
+  color:black;
+}
+
+.role5{
+  color:#555;
+  margin-bottom:50px;
+}
+
+/* BIG IMAGE SLIDER */
+.slider5{
+  display:flex;
+  gap:20px;
+  width:max-content;
+  animation:slide 25s linear infinite alternate;
+}
+
+/* IMAGE */
+.slider5 img{
+  width:180px;
+  height:180px;
+  border-radius:20px;
+  object-fit:cover;
+  filter:grayscale(100%) blur(2px);
+  opacity:0.6;
+  transition:0.3s;
+}
+
+.slider5 img:hover{
+  filter:none;
+  opacity:1;
+  transform:scale(1.1);
+}
+
+/* ANIMATION */
+@keyframes slide{
+  0%{ transform:translateX(0); }
+  100%{ transform:translateX(-40%); }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .comment5{
+    font-size:14px;
+  }
+
+  .slider5 img{
+    width:120px;
+    height:120px;
+  }
+
+  .user5 img{
+    width:80px;
+    height:80px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.section6{
+  background:#fff;
+  padding:80px 20px;
+  position:relative;
+}
+
+/* HEADING */
+.heading6{
+  text-align:center;
+  font-size:34px;
+  font-weight:bold;
+  color:black;
+  margin-bottom:50px;
+}
+
+/* SLIDER */
+.wrapper{
+  position:relative;
+  overflow:hidden;
+}
+
+.slider{
+  display:flex;
+  gap:25px;
+  transition:0.6s cubic-bezier(.25,.8,.25,1);
+}
+
+/* CARD */
+.card6{
+  min-width:280px;
+  height:360px;
+  border-radius:20px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card6 img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* OVERLAY GLASS */
+.overlay6{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:20px;
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(12px);
+}
+
+.overlay6 h3{
+  color:black;
+  font-size:18px;
+}
+
+.overlay6 p{
+  font-size:13px;
+  color:#333;
+  margin:8px 0;
+}
+
+.read6{
+  background:black;
+  color:white;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:12px;
+  text-decoration:none;
+}
+
+/* MODERN ARROWS */
+.controls6{
+  position:absolute;
+  right:20px;
+  top:20px;
+  display:flex;
+  gap:10px;
+}
+
+.arrow6{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:black;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* Hover animation */
+.arrow6:hover{
+  transform:scale(1.1) rotate(10deg);
+  background:#00ff99;
+  color:black;
+}
+
+/* Click animation */
+.arrow6:active{
+  transform:scale(0.9);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  .heading6{
+    font-size:24px;
+  }
+
+  .card6{
+    min-width:220px;
+    height:300px;
+  }
+
+  .controls6{
+    right:10px;
+    top:-10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN SECTION */
+.section7{
+  display:flex;
+  gap:20px;
+  padding:40px;
+  align-items:stretch;
+}
+
+/* LEFT BOX */
+.left-box7{
+  flex:1;
+  background:#000;
+  color:#fff;
+  padding:25px;
+  border-radius:15px;
+  position:relative;
+  overflow:hidden;
+}
+
+/* question circle */
+.q-circle{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  border:2px solid #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  margin-bottom:15px;
+}
+
+/* icons row */
+.icons7{
+  display:flex;
+  gap:10px;
+  margin:15px 0;
+}
+
+.icon7{
+  width:35px;
+  height:35px;
+  border:2px solid #fff;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* view button */
+.btn7{
+  display:inline-block;
+  padding:8px 18px;
+  border:2px solid #fff;
+  color:#fff;
+  background:transparent;
+  cursor:pointer;
+  margin:10px 0 20px 0;
+  transition:0.3s;
+}
+
+.btn7:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* heading */
+.left-box7 h2{
+  margin-top:10px;
+  font-size:18px;
+}
+
+.left-box7 p{
+  font-size:14px;
+  margin-top:10px;
+  line-height:1.4;
+}
+
+/* RIGHT BOX */
+.right-box7{
+  flex:1.2;
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  overflow:hidden;
+}
+
+/* animation */
+.fade-item{
+  opacity:0;
+  transform:translateY(-30px);
+  transition:0.6s ease;
+}
+
+.fade-item.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* item styling */
+.item7{
+  margin-bottom:15px;
+  padding:12px;
+  background:  #00ff88;
+  border-radius:10px;
+}
+
+.item7 h3{
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.item7 p{
+  font-size:13px;
+  color:#333;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .section7{
+    flex-direction:column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN SECTION */
+.section8{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:40px;
+  background:#7bd389; /* parrot green */
+  min-height:260px;
+  gap:20px;
+  overflow:hidden;
+}
+
+/* LEFT SIDE */
+.left8{
+  flex:1;
+  color:#000;
+}
+
+/* ICON AREA */
+.icon-box8{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+/* yellow circle */
+.circle8{
+  width:45px;
+  height:45px;
+  background:yellow;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+}
+
+/* black icon inside */
+.circle8 span{
+  width:18px;
+  height:18px;
+  background:#000;
+  display:block;
+  border-radius:3px;
+}
+
+/* heading */
+.left8 h2{
+  font-size:20px;
+  font-weight:bold;
+}
+
+/* paragraph */
+.left8 p{
+  font-size:14px;
+  margin-top:5px;
+  line-height:1.4;
+}
+
+/* text labels */
+.label8{
+  margin-top:12px;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+/* contact info */
+.info8{
+  font-size:14px;
+  margin-top:5px;
+}
+
+/* button */
+.btn8{
+  margin-top:15px;
+  padding:8px 15px;
+  background:#fff;
+  color:#000;
+  border:none;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn8:hover{
+  transform:translateX(5px);
+}
+
+/* RIGHT SIDE IMAGE */
+.right8{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.img-box8{
+  width:200px;
+  height:200px;
+  background:#d89b4c; /* osmani/orange tone */
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+  animation:float 3s ease-in-out infinite;
+}
+
+.img-box8 img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* animation */
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+  100%{transform:translateY(0);}
+}
+
+/* fade animation */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .section8{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .right8{
+    margin-top:20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    /* NAV / HERO */
+    .hero11{
+      height:80vh;
+      background:url('trail.jpg') center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      position:relative;
+    }
+
+    .hero11::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.6);
+    }
+
+    .hero-content11{
+      position:relative;
+      z-index:2;
+      animation:fadeUp 2s ease;
+      color: #fff;
+    }
+
+    .hero11 h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero11 p{
+      max-width:600px;
+      margin:auto;
+      line-height:1.6;
+      font-size:18px;
+    }
+
+    .btn11{
+      margin-top:20px;
+      padding:12px 25px;
+      border:none;
+      background: #16a34a;
+      color: #fff;
+      font-size:16px;
+      cursor:pointer;
+      border-radius:30px;
+      transition:0.3s;
+    }
+
+    .btn11:hover{
+      transform:scale(1.1);
+      background: black;
+    }
+
+    /* SECTION COMMON */
+    section{
+      padding:80px 10%;
+    }
+
+    .section-title11{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:40px;
+      animation:fadeUp 1s ease;
+    }
+
+    /* ABOUT */
+    .about11{
+      display:flex;
+      gap:40px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .about11 img{
+      width:100%;
+      max-width:450px;
+      border-radius:20px;
+      transition:0.5s;
+    }
+
+    .about11 img:hover{
+      transform:scale(1.05);
+    }
+
+    .about-text11{
+      flex:1;
+    }
+
+    .about-text11 p{
+      line-height:1.8;
+      margin-bottom:15px;
+    }
+
+    /* ADVENTURES */
+    .cards11{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card11{
+      background: #22c55e;
+      padding:20px;
+      border-radius:15px;
+      transition:0.4s;
+      animation:fadeUp 1s ease;
+    }
+
+    .card11:hover{
+      transform:translateY(-10px);
+      background: #334155;
+    }
+
+    .card11 img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:10px;
+    }
+
+    /* GALLERY */
+    .gallery11{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+      gap:15px;
+    }
+
+    .gallery11 img{
+      width:100%;
+      border-radius:10px;
+      transition:0.4s;
+    }
+
+    .gallery11 img:hover{
+      transform:scale(1.1);
+    }
+
+    /* CONTACT */
+    .contact11{
+      text-align:center;
+      background: #22c55e;
+      border-radius:20px;
+      padding:60px;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeUp{
+      from{opacity:0; transform:translateY(40px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .hero11 h1{font-size:40px;}
+      section{padding:50px 5%;}
+      .about{flex-direction:column;}
+    }
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+section{padding:80px 10%;}
+
+h1,h2{font-weight:700;}
+p{line-height:1.8;font-size:17px;}
+
+.btn12{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 28px;
+  background: #22c55e;
+  border:none;
+  border-radius:30px;
+  color: #fff;
+  cursor:pointer;
+  transition:.3s;
+}
+.btn12:hover{transform:scale(1.1);background: black;}
+
+/* HERO */
+.hero12{
+  height:80vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:url('phone.jpg') center/cover no-repeat;
+  position:relative;
+}
+.hero12::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.65);} 
+.hero-content12{position:relative;z-index:2;animation:fadeUp 1.5s ease; color: #fff;}
+.hero12 h1{font-size:65px;margin-bottom:20px;}
+.hero12 p{max-width:700px;margin:auto;}
+
+/* SPLIT SECTION */
+.split{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+.split img{
+  width:100%;
+  max-width:500px;
+  border-radius:20px;
+  opacity:0;
+  transform:translateX(-80px);
+  transition:1s;
+}
+.split.reverse img{transform:translateX(80px);} 
+
+.split-text{flex:1;}
+.split-text h2{font-size:40px;margin-bottom:15px;}
+.split-text p{margin-bottom:15px;}
+
+/* CARDS */
+.cards12{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.card{
+  background: #22c55e;
+  padding:20px;
+  border-radius:15px;
+  transition:.4s;
+  transform:translateY(50px);
+  opacity:0;
+}
+.card:hover{transform:translateY(-10px);background:#334155;}
+.card img{width:100%;border-radius:10px;margin-bottom:10px;}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+.gallery img{
+  width:100%;
+  border-radius:12px;
+  transform:scale(.8);
+  opacity:0;
+  transition:.6s;
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(50px);} 
+  to{opacity:1;transform:translateY(0);} 
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero12 h1{font-size:40px;}
+  section{padding:60px 6%;}
+  .split{flex-direction:column;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GLOBAL */
+section{
+    padding:80px 10%;
+}
+
+h1,h2{
+    margin-bottom:20px;
+}
+
+p{
+    line-height:1.7;
+    margin-bottom:20px;
+    color: #000;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:  #22c55e;
+    color: #fff;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    background: black;
+}
+
+/* HERO */
+.hero-zone{
+  text-align:center;
+  background:url('sea.jpg') center/cover no-repeat;
+  position:relative;
+  color: #fff;
+}
+
+.hero-zone h1{
+    font-size:50px;
+}
+
+.hero-zone p{
+    max-width:700px;
+    margin:auto;
+    color: #fff;
+}
+
+/* GRID */
+.grid-layout{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+.card-box{
+    background: #22c55e;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.card-box:hover{
+    transform:translateY(-10px);
+}
+
+/* IMAGE GROUP */
+.image-motion{
+    overflow:hidden;
+    position:relative;
+}
+
+.image-track{
+    display:flex;
+    gap:20px;
+    width:max-content;
+    animation:scrollLeft 20s linear infinite;
+}
+
+.image-track img{
+    width:250px;
+    height:180px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+@keyframes scrollLeft{
+    0%{transform:translateX(0);}
+    100%{transform:translateX(-50%);}
+}
+
+/* REVERSE ANIMATION */
+.reverse{
+    animation:scrollRight 20s linear infinite;
+}
+
+@keyframes scrollRight{
+    0%{transform:translateX(-50%);}
+    100%{transform:translateX(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero-zone h1{
+        font-size:32px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.modern-footer{
+    background: rgba(0,0,0,0.4);
+    color:#0f172a;
+    padding:60px 10% 30px;
+}
+
+/* GRID */
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+/* BOX */
+.footer-box h2{
+    margin-bottom:15px;
+}
+
+.footer-box p{
+    line-height:1.7;
+    margin-bottom:15px;
+    color:#475569;
+}
+
+/* SOCIAL */
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.icon{
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.icon:hover{
+    transform:scale(1.3) rotate(10deg);
+}
+
+/* BUTTON */
+.footer-btn{
+    padding:10px 20px;
+    border:none;
+    background: #22c55e;
+    color:#fff;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.footer-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    background: black;
+}
+
+/* LINE */
+.footer-line{
+    height:3px;
+    width:0;
+    background: #22c55e;
+    margin:40px 0;
+    animation:lineGrow 2s ease forwards;
+}
+
+@keyframes lineGrow{
+    from{width:0;}
+    to{width:100%;}
+}
+
+/* BOTTOM */
+.footer-bottom{
+    text-align:center;
+    font-size:14px;
+    color: #22c55e;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .modern-footer{
+        padding:40px 20px;
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header class="header0">
+
+  <!-- Left -->
+  <div class="logo0">
+    <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png">
+    ADVANZODL
+  </div>
+
+  <!-- Center -->
+  <nav class="nav0" id="navMenu">
+    <a href="#">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#ocean">Demonstrate <span>NEW</span></a>
+    <a href="#group">Fixed Groups <span>NEW</span></a>
+  </nav>
+
+  <!-- Right -->
+  <div class="right0">
+    <div class="search0">
+      <i class="fas fa-search"></i>
+    </div>
+
+    <button class="contact0">Contact Us</button>
+
+    <div class="menu-toggle0" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero1">
+
+  <div class="hero-content1">
+
+    <!-- Farmer Image -->
+    <img src="down.jpeg" class="farmer-img">
+
+    <!-- Heading -->
+    <h1>ADVENTURE</h1>
+
+    <!-- Paragraph -->
+    <p>
+      Discover the beauty of nature and farming life through exciting adventures. 
+      Explore fields, connect with nature, and experience the journey like never before.
+    </p>
+
+    <!-- Button -->
+    <a href="#" class="btn1">
+      Explore More <span>→</span>
+    </a>
+
+  </div>
+
+  <!-- Right Bottom Users -->
+  <div class="right-box1">
+    <div class="users">
+      <img src="https://randomuser.me/api/portraits/men/1.jpg">
+      <img src="https://randomuser.me/api/portraits/women/2.jpg">
+      <img src="https://randomuser.me/api/portraits/men/3.jpg">
+      <img src="https://randomuser.me/api/portraits/women/4.jpg">
+    </div>
+
+    <div class="users-text1">
+      <h3>100+</h3>
+      <p>Happy explorers joined our adventure</p>
+    </div>
+  </div>
+
+  <!-- Scroll Circle -->
+  <div class="scroll-circle" id="scrollDown">
+    <i class="fas fa-arrow-down"></i>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section2">
+
+  <div class="container2">
+
+    <!-- LEFT -->
+    <div class="left2">
+
+      <p class="main-text2">
+        Adventure is more than just a journey — it is an experience that connects you with nature, 
+        culture, and your inner self. Whether you are exploring green fields, climbing mountains, 
+        or walking through peaceful villages, every step brings a new story. Our adventure programs 
+        are designed to give you unforgettable memories filled with excitement and discovery. 
+        From beginners to experienced explorers, we provide the perfect balance of thrill and comfort. 
+        Join us and start your journey towards unforgettable adventures today.
+      </p>
+
+      <!-- Button -->
+      <a href="#" class="btn2">
+        Plan Your Adventures <span>→</span>
+      </a>
+
+      <!-- Stats -->
+      <div class="stats2">
+        <div class="stat">
+          <h2>10+</h2>
+          <p>Years of experience in adventure tours</p>
+        </div>
+
+        <div class="stat">
+          <h2>95%</h2>
+          <p>Customer satisfaction and success rate</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right2">
+      <img src="sun.jpg">
+
+      <div class="image-btn">
+        Emma Haveli
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section3">
+
+  <!-- HEADING -->
+  <div class="heading3">
+    <h1>
+      Top Picks For Your
+      <span>Next Getaway</span>
+    </h1>
+  </div>
+
+  <!-- CARD 1 -->
+  <div class="card3">
+    <div class="title-green3">NAMES</div>
+    <div class="title">Alpine Explorer</div>
+
+    <div class="arrow3" onclick="toggleCard(this)">➜</div>
+
+    <img src="trail.jpg">
+  </div>
+
+  <!-- MIDDLE WHITE BOX -->
+  <div class="middle-box3">
+    <img src="front.jpg">
+
+    <div class="middle-content3">
+      <h3>Tropical Escape</h3>
+      <div class="percent3">+85% Among Teams</div>
+      <p>
+        A relaxing tropical journey filled with beaches, sunshine, 
+        and unforgettable experiences for your next vacation.
+      </p>
+    </div>
+
+    <div class="btn3">
+      Book Now →
+    </div>
+  </div>
+
+  <!-- CARD 2 -->
+  <div class="card3">
+    <div class="title-green3">SHARARA OC</div>
+    <div class="title">Rainforest Retreat</div>
+
+    <div class="arrow3" onclick="toggleCard(this)">➜</div>
+
+    <img src="sun.jpg">
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section4">
+
+  <!-- TOP -->
+  <div class="top4">
+    <h2>
+      Explore Amazing <br>
+      Adventures Around You
+    </h2>
+
+    <p>
+      Discover thrilling adventures across different landscapes. 
+      From mountains to forests, experience nature like never before.
+    </p>
+  </div>
+
+  <!-- SLIDER -->
+  <div class="slider4">
+
+    <!-- CARD 1 -->
+    <div class="card4">
+      <img src="sun.jpg">
+      <div class="overlay4">
+        <div class="label4">Mountain</div>
+        <div class="title4">Alpine Trek</div>
+        <div class="temp4">-5°C</div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card4">
+      <img src="trail.jpg">
+      <div class="overlay4">
+        <div class="label4">Forest</div>
+        <div class="title4">Rain Walk</div>
+        <div class="temp4">22°C</div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card4">
+      <img src="fores.jpg">
+      <div class="overlay4">
+        <div class="label4">Beach</div>
+        <div class="title4">Sunny Coast</div>
+        <div class="temp4">30°C</div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card4">
+      <img src="phone.jpg">
+      <div class="overlay4">
+        <div class="label4">Desert</div>
+        <div class="title4">Sand Dunes</div>
+        <div class="temp4">40°C</div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="card4">
+      <img src="front.jpg">
+      <div class="overlay4">
+        <div class="label4">Ocean</div>
+        <div class="title4">Blue Waves</div>
+        <div class="temp4">28°C</div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="card4">
+      <img src="sun.jpg">
+      <div class="overlay4">
+        <div class="label4">Village</div>
+        <div class="title4">Green Fields</div>
+        <div class="temp4">25°C</div>
+      </div>
+    </div>
+
+    <!-- CARD 7 -->
+    <div class="card4">
+      <img src="sea.jpg">
+      <div class="overlay4">
+        <div class="label4">Lake</div>
+        <div class="title4">Silent Water</div>
+        <div class="temp4">18°C</div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section5">
+
+  <!-- USER -->
+  <div class="user5">
+    <img src="down.jpeg">
+    <div class="quote5">
+      <i class="fas fa-quote-right"></i>
+    </div>
+  </div>
+
+  <!-- COMMENT -->
+  <p class="comment5">
+    This was one of the most incredible adventures I’ve ever experienced. 
+    Everything from the environment to the people was perfectly organized. 
+    I would highly recommend this journey to anyone seeking real excitement.
+  </p>
+
+  <!-- STARS -->
+  <div class="stars5">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+  </div>
+
+  <!-- NAME -->
+  <div class="name5">Ali Husnain</div>
+  <div class="role5">Explorer & Traveler</div>
+
+  <!-- BIG IMAGE SLIDER -->
+  <div class="slider5">
+    <img src="https://randomuser.me/api/portraits/men/1.jpg">
+    <img src="https://randomuser.me/api/portraits/women/2.jpg">
+    <img src="https://randomuser.me/api/portraits/men/3.jpg">
+    <img src="https://randomuser.me/api/portraits/women/4.jpg">
+    <img src="https://randomuser.me/api/portraits/men/5.jpg">
+    <img src="https://randomuser.me/api/portraits/women/6.jpg">
+    <img src="https://randomuser.me/api/portraits/men/7.jpg">
+    <img src="https://randomuser.me/api/portraits/women/8.jpg">
+    <img src="https://randomuser.me/api/portraits/men/9.jpg">
+    <img src="https://randomuser.me/api/portraits/women/10.jpg">
+    <img src="https://randomuser.me/api/portraits/men/11.jpg">
+    <img src="https://randomuser.me/api/portraits/women/12.jpg">
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section6">
+
+  <!-- HEADING -->
+  <div class="heading6">
+    Travel Stories & Tips
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls6">
+    <div class="arrow6" onclick="slideLeft()">←</div>
+    <div class="arrow6" onclick="slideRight()">→</div>
+  </div>
+
+  <!-- SLIDER -->
+  <div class="wrapper">
+    <div class="slider" id="slider">
+
+      <!-- CARD -->
+      <div class="card6">
+        <img src="rest.jpg">
+        <div class="overlay6">
+          <h3>Mountain Trip</h3>
+          <p>Explore breathtaking peaks and nature.</p>
+          <a href="#" class="read6">Read More</a>
+        </div>
+      </div>
+
+      <div class="card6">
+        <img src="fores.jpg">
+        <div class="overlay6">
+          <h3>Forest Walk</h3>
+          <p>Peaceful journeys through green forests.</p>
+          <a href="#" class="read6">Read More</a>
+        </div>
+      </div>
+
+      <div class="card6">
+        <img src="front.jpg">
+        <div class="overlay6">
+          <h3>Beach Time</h3>
+          <p>Relax and enjoy sunny beaches.</p>
+          <a href="#" class="read6">Read More</a>
+        </div>
+      </div>
+
+      <div class="card6">
+        <img src="sea.jpg">
+        <div class="overlay6">
+          <h3>Ocean View</h3>
+          <p>Endless blue horizons and calm waves.</p>
+          <a href="#" class="read6">Read More</a>
+        </div>
+      </div>
+
+      <div class="card6">
+        <img src="trail.jpg">
+        <div class="overlay6">
+          <h3>Desert Ride</h3>
+          <p>Experience thrilling desert safaris.</p>
+          <a href="#" class="read6">Read More</a>
+        </div>
+      </div>
+
+      <div class="card6">
+        <img src="lake.jpg">
+        <div class="overlay6">
+          <h3>Lake Calm</h3>
+          <p>Relax near peaceful waters.</p>
+          <a href="#" class="read6">Read More</a>
+        </div>
+      </div>
+
+      <div class="card6">
+        <img src="sun.jpg">
+        <div class="overlay6">
+          <h3>Village Life</h3>
+          <p>Discover simple and beautiful living.</p>
+          <a href="#" class="read6">Read More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section7">
+
+  <!-- LEFT SIDE -->
+  <div class="left-box7">
+    
+    <div class="q-circle">?</div>
+
+    <div class="icons7">
+      <div class="icon7">👤</div>
+      <div class="icon7">👤</div>
+      <div class="icon7">👤</div>
+    </div>
+
+    <button class="btn7">VIEW</button>
+
+    <h2>Frequently Asked Queries</h2>
+    <p>
+      Here you can find the most common questions and answers related to our services and adventure system.
+    </p>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right-box7">
+
+    <div class="item7 fade-item">
+      <h3>1. What is Adventure?</h3>
+      <p>Adventure is an exciting experience that involves exploration and challenges.</p>
+    </div>
+
+    <div class="item7 fade-item">
+      <h3>2. Types of Adventures</h3>
+    </div>
+
+    <div class="item7 fade-item">
+      <h3>3. Outdoor Activities</h3>
+    </div>
+
+    <div class="item7 fade-item">
+      <h3>4. Travel Exploration</h3>
+    </div>
+
+    <div class="item7 fade-item">
+      <h3>5. Risk Factors</h3>
+    </div>
+
+    <div class="item7 fade-item">
+      <h3>6. Safety Guidelines</h3>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section8 fade" id="sec">
+
+  <!-- LEFT -->
+  <div class="left8">
+
+    <div class="icon-box8">
+      <div class="circle8">
+        <span></span>
+      </div>
+      <h2>Adventures</h2>
+    </div>
+
+    <p>
+      Explore amazing adventures around the world and enjoy unforgettable experiences.
+    </p>
+
+    <div class="label8">LET'S TALK</div>
+    <div class="label8">CONTACT US SOCIALS</div>
+
+    <div class="info8">📞 +92 300 1234567</div>
+    <div class="info8">📧 example@email.com</div>
+
+    <button class="btn8">
+      View More ➜
+    </button>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right8">
+    <div class="img-box8">
+      <img src="down.jpeg" alt="adventure">
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HERO SECTION -->
+  <div class="hero11" id="about">
+    <div class="hero-content11">
+      <h1>Adventure Awaits</h1>
+      <p>
+        Explore the world of thrilling adventures where mountains touch the sky, rivers flow wild,
+        and every step brings a new story of excitement and freedom.
+      </p>
+      <button class="btn11" onclick="scrollToSection()">Explore More</button>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section>
+    <h2 class="section-title11">About Us</h2>
+    <div class="about11">
+      <img src="phone.jpg" alt="adventure">
+      <div class="about-text11">
+        <p>
+          We are passionate explorers who believe that life is meant to be lived beyond boundaries.<br>
+          Our mission is to take you closer to nature, mountains, oceans and wild landscapes.<br>
+          The content should focus on:<br>
+          1.Love for adventure and nature<br>
+          2.Providing thrilling and safe experiences<br>
+          3.Building unforgettable memories for traveler<br>
+        </p>
+        <p>
+          From trekking in high mountains to diving into deep blue oceans,<br> we create unforgettable
+          adventure experiences that stay in your memory forever.
+        </p>
+        <button class="btn11">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVENTURES SECTION -->
+  <section>
+    <h2 class="section-title11">Top Adventures</h2>
+    <div class="cards11">
+
+      <div class="card11">
+        <img src="rest.jpg">
+        <h3>Mountain Hiking</h3>
+        <p>Explore high peaks and feel the fresh air of mountains with <br>
+          exciting trails and views."Mountain 
+        hiking offers a perfect blend of challenge and serenity. Traverse rugged 
+        trails, witness panoramic views, and reconnect with nature as you push 
+        your limits and discover the hidden wonders of the highlands."</p>
+      </div>
+
+      <div class="card11">
+        <img src="for.jpg">
+        <h3>Ocean Diving</h3>
+        <p>Dive deep into the ocean and discover the magical underwater <br>
+          world full of life.Design a visually stunning hero section for an <br>
+          ocean diving website. Add a full-screen underwater background <br>
+          with divers exploring coral reefs and colorful fish. Include a large <br>
+          headline like “Dive Into the Deep Blue” and a short tagline. <br>
+          Add CTA buttons such as “Book a Dive” and “Explore <br>Packages”.
+          Use modern typography and glowing effects.</p>
+      </div>
+
+      <div class="card11">
+        <img src="front.jpg">
+        <h3>Forest Safari</h3>
+        <p>Experience wild forest life and explore animals in their natural <br>
+          environment.Design a visually captivating hero section for a forest safari website. Add a full-screen background image of a dense jungle with wildlife like tigers, elephants, and birds. Include a large headline like “Explore the Wild जंगल” or “Into the Heart of Nature”. Add CTA buttons such as “Book Safari” and “Discover Tours”. Use modern fonts and smooth animations.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section>
+    <h2 class="section-title11">Adventure Gallery</h2>
+    <div class="gallery11">
+      <img src="sea.jpg">
+      <img src="phone.jpg">
+      <img src="fores.jpg">
+      <img src="trail.jpg">
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section>
+    <div class="contact11">
+      <h2>Join Our Adventure</h2>
+      <p>Start your journey today and explore the world like never before.</p>
+      <button class="btn11">Get Started</button>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="hero12" id="ocean">
+  <div class="hero-content12">
+    <h1>Adventure Demonstrate</h1>
+    <p>
+      Welcome to a new era of adventure demonstration where exploration meets innovation.
+      This page showcases modern adventure experiences with immersive visuals, dynamic storytelling,
+      and powerful journeys that reflect the future of outdoor exploration and thrill.
+    </p>
+    <button class="btn12">Start Exploring</button>
+  </div>
+</section>
+
+<!-- SECTION 1 -->
+<section>
+  <div class="split">
+    <img src="lake.jpg">
+    <div class="split-text">
+      <h2>Next Generation Adventures</h2>
+      <p>
+        The world of adventure is evolving rapidly with modern technologies and creative exploration.
+        From smart navigation systems to immersive outdoor experiences, adventures are now more
+        accessible, safe, and thrilling than ever before.
+      </p>
+      <p>
+        This new generation of exploration brings together nature and innovation, allowing travelers
+        to experience mountains, forests, and oceans in ways never imagined before.
+      </p>
+      <button class="btn12">Learn More</button>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section>
+  <div class="split reverse">
+    <div class="split-text">
+      <h2>Smart Exploration Experience</h2>
+      <p>
+        Adventure demonstration now includes real-time tracking, AI-powered guides, and enhanced
+        safety features that make every journey smoother and more exciting.
+      </p>
+      <p>
+        Whether you are hiking mountains or diving into oceans, technology enhances your experience
+        by providing insights, directions, and unforgettable memories.
+      </p>
+      <button class="btn12">Discover More</button>
+    </div>
+    <img src="phone.jpg">
+  </div>
+</section>
+
+<!-- CARDS -->
+<section>
+  <h2 style="text-align:center;font-size:45px;margin-bottom:40px;">Modern Adventure Types</h2>
+  <div class="cards12">
+
+    <div class="card">
+      <img src="for.jpg">
+      <h3>Ocean Exploration</h3>
+      <p>Discover underwater ecosystems with modern diving tools and enhanced safety systems.</p>
+    </div>
+
+    <div class="card">
+      <img src="phone.jpg">
+      <h3>Mountain Trekking</h3>
+      <p>Experience high altitude adventures with guided routes and smart gear technology.</p>
+    </div>
+
+    <div class="card">
+      <img src="fores.jpg">
+      <h3>Forest Survival</h3>
+      <p>Explore deep forests with survival training and immersive natural experiences.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section>
+  <h2 style="text-align:center;font-size:45px;margin-bottom:40px;">Adventure Showcase</h2>
+  <div class="gallery">
+    <img src="phone.jpg">
+    <img src="trail.jpg">
+    <img src="sun.jpg">
+    <img src="sea.jpg">
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- HERO -->
+<section class="hero-zone" id="group">
+    <h1>Fixed Group Adventures</h1>
+    <p>
+        Fixed group adventures are organized travel experiences where individuals join a pre-planned group itinerary. These adventures are designed for travelers who want a hassle-free experience, social interaction, and cost-effective exploration. From mountain trekking to ocean diving, fixed groups provide structure, safety, and unforgettable shared memories.
+    </p>
+    <a href="#" class="btn">Explore More</a>
+</section>
+
+<!-- ABOUT -->
+<section class="about-flow">
+    <div class="grid-layout">
+        <div>
+            <h2>What Are Fixed Groups?</h2>
+            <p>
+                Fixed groups are pre-arranged travel teams with a defined schedule, destination, and number of participants. These groups are led by professional guides and often include transportation, accommodation, and activities. Travelers benefit from shared costs and enhanced safety, while also building connections with like-minded adventurers.
+            </p>
+            <a href="#" class="btn">Join Now</a>
+        </div>
+        <div>
+            <img src="for.jpg" width="100%">
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="feature-hub">
+    <h2 style="text-align:center;">Why Choose Fixed Groups?</h2>
+    <div class="grid-layout">
+        <div class="card-box">
+            <h3>Cost Effective</h3>
+            <p>Sharing expenses makes travel more affordable while maintaining quality experiences.</p>
+        </div>
+        <div class="card-box">
+            <h3>Social Experience</h3>
+            <p>Meet new people and build lifelong friendships during your journey.</p>
+        </div>
+        <div class="card-box">
+            <h3>Guided Safety</h3>
+            <p>Professional guides ensure safety, planning, and smooth travel operations.</p>
+        </div>
+    </div>
+</section>
+
+<!-- IMAGE ROTATION -->
+<section class="gallery-motion">
+    <h2 style="text-align:center;">Adventure Moments</h2>
+
+    <div class="image-motion">
+        <div class="image-track">
+            <img src="sea.jpg">
+            <img src="for.jpg">
+            <img src="trail.jpg">
+            <img src="sun.jpg">
+            <img src="rest.jpg">
+            <img src="phone.jpg">
+            <img src="fores.jpg">
+        </div>
+    </div>
+
+    <div class="image-motion" style="margin-top:30px;">
+        <div class="image-track reverse">
+            <img src="phone.jpg">
+            <img src="rest.jpg">
+            <img src="sun.jpg">
+            <img src="fores.jpg">
+            <img src="trail.jpg">
+            <img src="for.jpg">
+            <img src="sea.jpg">
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-block" style="text-align:center;">
+    <h2>Start Your Adventure Today</h2>
+    <p>
+        Whether you're looking for thrilling outdoor experiences or peaceful nature escapes, fixed group adventures offer the perfect balance of excitement and convenience. Join a group today and explore the world like never before.
+    </p>
+    <a href="#" class="btn">Get Started</a>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FOOTER SECTION START -->
+<section class="modern-footer">
+
+    <div class="footer-container">
+
+        <!-- COLUMN 1 -->
+        <div class="footer-box">
+            <h2>Adventure World</h2>
+            <p>
+                Discover thrilling journeys across mountains, oceans, and forests. 
+                Fixed group adventures offer unforgettable experiences with safety, 
+                expert guidance, and amazing people. Travel smarter and explore deeper 
+                with our curated adventure programs designed for modern explorers.
+            </p>
+
+            <!-- SOCIAL ICONS -->
+            <div class="social-icons">
+                <i class="icon">🌐</i>
+                <i class="icon">📘</i>
+                <i class="icon">📸</i>
+                <i class="icon">▶</i>
+            </div>
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div class="footer-box">
+            <h2>Mountain Trekking</h2>
+            <p>
+                Experience the beauty of towering peaks and breathtaking landscapes. 
+                Our mountain trekking groups are designed for both beginners and experts, 
+                ensuring safety while maximizing adventure and exploration opportunities.
+            </p>
+            <button class="footer-btn">Read More</button>
+        </div>
+
+        <!-- COLUMN 3 -->
+        <div class="footer-box">
+            <h2>Ocean Diving</h2>
+            <p>
+                Dive into the deep blue and explore marine life like never before. 
+                Our guided diving trips ensure a safe and exciting underwater experience 
+                for all levels of divers with professional instructors.
+            </p>
+            <button class="footer-btn">View More</button>
+        </div>
+
+        <!-- COLUMN 4 -->
+        <div class="footer-box">
+            <h2>Forest Safari</h2>
+            <p>
+                Walk through lush green forests and discover wildlife in its natural habitat. 
+                Our safari adventures bring you closer to nature with eco-friendly travel 
+                and experienced local guides.
+            </p>
+            <button class="footer-btn">Read More</button>
+        </div>
+
+        <!-- COLUMN 5 -->
+        <div class="footer-box">
+            <h2>Desert Camping</h2>
+            <p>
+                Enjoy peaceful nights under the stars in vast desert landscapes. 
+                Experience cultural traditions, bonfires, and unique desert adventures 
+                with well-organized group setups.
+            </p>
+            <button class="footer-btn">View More</button>
+        </div>
+
+    </div>
+
+    <!-- ANIMATED LINE -->
+    <div class="footer-line"></div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        <p>© 2026 Adventure Fixed Groups | All Rights Reserved</p>
+    </div>
+
+</section>
+<!-- FOOTER SECTION END -->
+
+
+<script>
+const toggle = document.getElementById("menuToggle");
+const nav = document.getElementById("navMenu");
+
+toggle.addEventListener("click", ()=>{
+  nav.classList.toggle("active");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("scrollDown").addEventListener("click", () => {
+  window.scrollBy({
+    top: window.innerHeight,
+    behavior: "smooth"
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// simple animation on scroll
+window.addEventListener("scroll", ()=>{
+  const section = document.querySelector(".section");
+  section.style.opacity = "1";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function toggleCard(el){
+  const card = el.parentElement;
+  card.classList.toggle("active");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Optional: pause animation on hover
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("mouseenter", ()=>{
+  slider.style.animationPlayState = "paused";
+});
+
+slider.addEventListener("mouseleave", ()=>{
+  slider.style.animationPlayState = "running";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let position = 0;
+
+function slideRight(){
+  position -= 320;
+  document.getElementById("slider").style.transform =
+    `translateX(${position}px)`;
+}
+
+function slideLeft(){
+  position += 320;
+  if(position > 0) position = 0;
+  document.getElementById("slider").style.transform =
+    `translateX(${position}px)`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// scroll animation
+const items = document.querySelectorAll('.fade-item');
+
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:0.2});
+
+items.forEach(item=>{
+  observer.observe(item);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// scroll animation
+window.addEventListener("scroll", function(){
+  document.getElementById("sec").classList.add("show");
+});
+
+// load animation
+window.onload = () => {
+  document.getElementById("sec").classList.add("show");
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ function scrollToSection(){
+      window.scrollTo({top:700, behavior:'smooth'});
+    }
+
+    // simple scroll animation
+    const cards = document.querySelectorAll('.card');
+
+    window.addEventListener('scroll', ()=>{
+      cards.forEach(card=>{
+        const rect = card.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+          card.style.opacity = 1;
+          card.style.transform = "translateY(0)";
+        }
+      });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// scroll animation
+const elements = document.querySelectorAll('.split img, .card, .gallery img');
+
+window.addEventListener('scroll', () => {
+  elements.forEach(el => {
+    const pos = el.getBoundingClientRect().top;
+    if(pos < window.innerHeight - 100){
+      el.style.opacity = 1;
+      el.style.transform = 'translateX(0) translateY(0) scale(1)';
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// BUTTON CLICK EFFECT
+document.querySelectorAll(".btn").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        btn.style.transform="scale(0.9)";
+        setTimeout(()=>{
+            btn.style.transform="scale(1)";
+        },150);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// BUTTON CLICK ANIMATION
+document.querySelectorAll(".footer-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>{
+        btn.style.transform="scale(0.9)";
+        setTimeout(()=>{
+            btn.style.transform="scale(1)";
+        },150);
+    });
+});
+
+// ICON CLICK EFFECT
+document.querySelectorAll(".icon").forEach(icon=>{
+    icon.addEventListener("click",()=>{
+        icon.style.transform="scale(1.5)";
+        setTimeout(()=>{
+            icon.style.transform="scale(1)";
+        },200);
+    });
+});
+
+
+
+
+</script>
+
+</body>
+</html>
